@@ -11,7 +11,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.9
+        python-version: 3.7
 
     - name: Install dependencies
       run: |
@@ -44,7 +44,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/web
+          tags: ${{ secrets.DOCKER_USERNAME }}/infra_actions:latest
 
 
   deploy:
@@ -59,7 +59,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          sudo docker pull ${{ secrets.DOCKER_USERNAME }}/web
+          sudo docker pull ${{ secrets.DOCKER_USERNAME }}/infra_actions
           sudo docker-compose stop
           sudo docker-compose rm web
           touch .env
