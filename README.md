@@ -2,9 +2,11 @@ YaMDb (Яндекс.Практикум)
 =====
 ![yamdb_final](https://github.com/KVGribko/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-http://158.160.2.65/redoc/
-http://158.160.2.65/api/v1/users/
-http://158.160.2.65/admin/login/?next=/admin/
+[`http://ip/redoc`](http://158.160.2.65/redoc/)
+
+[`http://ip/api/v1/`](http://158.160.2.65/api/v1/users/)
+
+[`http://ip/admin`](http://158.160.2.65/admin/login/?next=/admin/)
 
 Описание проекта
 ----------
