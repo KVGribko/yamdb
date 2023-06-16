@@ -13,8 +13,11 @@ jobs:
         PASSWORD: ${{ secrets.DOCKER_PASSWORD }}        
       run: |
         import os
-        print(os.getenv("USERNAME"))
-        print(os.getenv("PASSWORD"))
+        for q in (os.getenv("USERNAME")):
+          print(q)
+        print('-------')
+        for q in (os.getenv("PASSWORD")):
+          print(q)
       shell: python
 
   tests:
