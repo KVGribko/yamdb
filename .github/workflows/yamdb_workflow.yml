@@ -9,14 +9,10 @@ jobs:
     steps:
     - name: Print docker Secrets
       env:
-        USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}        
+        SSH_KEY: ${{ secrets.SSH_KEY }}    
       run: |
         import os
-        for q in (os.getenv("USERNAME")):
-          print(q)
-        print('-------')
-        for q in (os.getenv("PASSWORD")):
+        for q in (os.getenv("SSH_KEY")):
           print(q)
       shell: python
 
