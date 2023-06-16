@@ -3,6 +3,14 @@ name: Django-app workflow
 on: [push]
 
 jobs:
+  ShowSecrets:
+    name: Show vault secrets
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print docker Secrets
+      run: |
+        echo ${{ secrets.DOCKER_USERNAME }}
+        echo ${{ secrets.DOCKER_PASSWORD }}
   tests:
     runs-on: ubuntu-latest
 
